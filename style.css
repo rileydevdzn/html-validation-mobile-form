@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  margin: 7rem auto;
+  font-family: Roboto, sans-serif;
+  font-size: 1.25rem;
+/*---Manually set to iPhone 8---*/
+  width: 375px;
+  height: 667px;
+  border: 1px solid;
+/*---iPhone 8 outline---*/  
+  background-image: url("https://assets.codepen.io/3270335/iPhone8-outline.png");
+  background-repeat: no-repeat;
+  background-position: center 15px;
+}
+
+main {
+  width: 100%;
+  margin: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center; 
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+form {
+  text-align: right;
+}
+
+/*Visual reference to indicate which form fields are required*/
+.indicates-required {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.5rem;
+  margin: 1rem 0 1.1rem 0;
+  text-align: left;
+}
+
+fieldset div:last-child {
+  margin-bottom: 0.75rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/*For floating labels the label comes after the input in the DOM, which can be confusing to screen readers. Content with .sr-only visually hides additional content accessible to screen readers.*/
+.sr-only {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+input {
+  width: 100%;
+  height: 3.375rem;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  padding-left: 2.5rem;
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+}
+
+input#pw {
+  margin-top: 2rem;
+}
+
+input:focus {
+  /*Remove browser :focus default styling*/
+  outline: 0;
+  /*Add outline matching app styles*/
+  border: 2px solid blue;
+}
+
+/*Floating labels position labels inside input fields instead of using placeholder text. Semantically linked, noted cannot select the label to put focus on the input field. Attribute aria-hidden prevents the content from being presented twice to screen readers, already presented with the .sr-only class*/
+label {
+  width: calc(100% - 1rem);
+  position: absolute;
+  top: 1.15rem;
+  left: 1rem;
+  opacity: 0.6;
+  font-size: 1.25rem;
+}
+
+.pw-label {
+  top: 2.95rem;
+  left: 1rem;
+}
+
+.asterisk {
+  font-size: 1rem;
+  vertical-align: 25%;
+}
+
+/*Move floating label above input field when field is selected*/
+input:focus + label, input:valid + label, input:invalid:not(:focus):not(:placeholder-shown) + label {
+  opacity: 1;
+  position: absolute;
+  top: -2.75rem;
+  left: 0;
+}
+
+/*Provides instructions for each input field. Located above the input to prevent being blocked by autocomplete or keyboards. Visually hidden until input is selected while still accessible to screen readers. Attribute aria-describedby applied for screen readers to link to input*/
+.hint {
+  position: absolute;
+  top: -1rem;
+  font-size: 0.8rem;
+  color: blue;
+  font-style: italic;
+  max-height: 2.75rem;
+  transform: scale(0);
+  margin-bottom: 0.25rem;
+}
+
+/*Instructions become visible (visually) when input field selected*/
+input:focus ~ .hint {
+  transform: scale(1);
+  transition-property: transform;
+  transition-delay: 0.25s;
+}
+
+/*Keep requirements visible and change color to red (along with the x-mark and dashed red border) to indicate an error; remain visible while input invalid*/
+input:invalid:not(:focus):not(:placeholder-shown) ~ .hint {
+  transform: scale(1);
+  color: red;
+}
+
+/*Requirements turn green then disappear after 1.5s delay for valid inputs*/
+input:valid:focus:not(:placeholder-shown) ~ .hint {
+  color: green;
+  transform: scale(1);
+  transition-property: transform;
+  transition-delay: 1.5s;
+}
+
+/*Visually indicate valid input with a checkmark icon and change in border color of input*/
+input:valid:focus:not(:placeholder-shown), input:valid:not(:focus):not(:placeholder-shown) {
+  border: 2px solid green;
+  background: url(https://assets.codepen.io/3270335/green-check-circle.svg);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 8px 13px;
+}
+
+/*Visually indicate invalid input with an x-mark and change in border color and line style of input*/
+input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 2px dashed red; 
+  background: url(https://assets.codepen.io/3270335/red-xmark-circle.svg);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 8px 13px;
+}
+
+/*Hide/show password button*/
+#show-pw {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 65px;
+  height: 50px;
+  position: absolute;
+  top: 34px;
+  left: 210px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;	
+	background-color: white;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: transparent;
+  padding: 0 0.75rem;
+  visibility: hidden;
+}
+
+/*View password while typing*/
+#view-pw {
+  height: 1rem;
+  padding-top: 0.5rem;
+  padding-left: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  visibility: hidden;
+}
+
+/*placeholder=" " included in HTML attributes to use CSS pseudo-class :placeholder-shown, combined with :invalid and :focus so error messages/styling appear after user has finished typing and moved focus, instead of while user is typing*/
+
+/*View pw while typing and remain visible as long as input invalid*/
+#pw:invalid:focus:not(:placeholder-shown) ~ #view-pw, #pw:invalid:not(:focus):not(:placeholder-shown) ~ #view-pw {
+  visibility: visible;
+}
+
+/*View pw disappears after a 1.5s delay for valid input*/
+#pw:valid:focus:not(:placeholder-shown) ~ #view-pw, #pw:valid:not(:focus):not(:placeholder-shown) ~ #view-pw {
+  visibility: hidden;
+  transition-property: visibility;
+  transition-delay: 1.5s;
+}
+
+/*Show password button appears as alternate option for valid input after view-pw disappears */
+#pw:valid:focus:not(:placeholder-shown) ~ #show-pw, #pw:valid:not(:focus):not(:placeholder-shown) ~ #show-pw {
+  visibility: visible;
+  transition-property: visibility;
+  transition-delay: 1.5s;
+}
+
+/*Remove browser default styling on create account button, add styling to match app styles*/
+.create-acct {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: medium;
+    min-height: 2rem;
+    text-decoration: none;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 1.25rem;
+    padding: 0.75rem 2rem;
+    margin-top: ;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/*Visual change to indicate focus on button*/
+.create-acct:hover, .create-acct:focus {
+  background-color: orange;
+  color: black;
+}
+
+/*Link to return to log in page*/
+.login {
+  background-color: transparent;
+  padding: 0.1rem 0.25rem;
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Visual change to indicate focus on link*/
+.login:hover, .login:focus {
+  background-color: orange;
+  color: black;
+}
+
+.login:visited {
+  background-color: transparent;
+  color: orange;
+}
