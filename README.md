@@ -33,13 +33,13 @@ Users should be able to:
   src="Mobile form - instructions.png"
   alt="Mobile sign-up form with instructions displayed for entering inputs"
   title="Mobile sign-up form, instructions"
-  width="150px">
+  width="175px">
 
 <img
   src="Mobile form - valid input.png"
   alt="Mobile sign-up form with green checkmark icon indicating a valid input"
   title="Mobile sign-up form, valid input"
-  width="150px">
+  width="175px">
 
 <img
   src="Mobile form - fix error.png"
