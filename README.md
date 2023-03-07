@@ -33,7 +33,7 @@ Users should be able to:
   src="Mobile form - instructions.png"
   alt="Mobile sign-up form with instructions displayed for entering inputs"
   title="Mobile sign-up form, instructions"
-  width="175px">
+  width="180x">
 
 <img
   src="Mobile form - valid input.png"
@@ -45,7 +45,7 @@ Users should be able to:
   src="Mobile form - fix error.png"
   alt="Mobile sign-up form with red x-mark icon indicating an invalid input and hint for correct input format"
   title="Mobile sign-up form, invalid input"
-  width="200px">
+  width="225px">
   
 ### Links
 
