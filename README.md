@@ -29,6 +29,24 @@ Users should be able to:
 
 ### Screenshots
 
+<img
+  src="Mobile form - instructions.png"
+  alt="Mobile sign-up form with instructions displayed for entering inputs"
+  title="Mobile sign-up form, instructions"
+  width="150px">
+
+<img
+  src="Mobile form - valid input.png"
+  alt="Mobile sign-up form with green checkmark icon indicating a valid input"
+  title="Mobile sign-up form, valid input"
+  width="150px">
+
+<img
+  src="Mobile form - fix error.png"
+  alt="Mobile sign-up form with red x-mark icon indicating an invalid input and hint for correct input format"
+  title="Mobile sign-up form, invalid input"
+  width="150px">
+  
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -96,7 +114,7 @@ pw.oninput = function(event) {
 
 One of the top UX questions I had was about timing, when to validate inputs and display error messages - as a user types? after the input is no longer in focus? when the users goes to submit the form?
 
-The pattern I used focused on was rewarding users early, and punishing late, meaning the form would validate in the background as the user types, and would display correct inputs immediately as the user types, but wouldn't show the error message until the input was no longer in focus (when the user clicks or tabs away). That way the user wouldn't be annoyed by a constant error as they were typing an email address, for example, but would receive the error after they were done typing if the format was incorrect. I also wanted to avoid the validation at submit scenario, finding out you have an error somewhere in the form is pretty annoying when you think you're done and trying to submit.
+The pattern I used focused on rewarding users early, and punishing late, meaning the form would validate in the background as the user types, and would display correct inputs immediately as the user types, but wouldn't show the error message until the input was no longer in focus (when the user clicks or tabs away). That way the user wouldn't be annoyed by a constant error as they were typing an email address, for example, but would receive the error after they were done typing if the format was incorrect. I also wanted to avoid the validation at submit scenario, finding out you have an error somewhere in the form is pretty annoying when you think you're done and trying to submit.
 
 5. Presentation of information is important.
 
