@@ -45,7 +45,7 @@ Users should be able to:
   src="Mobile form - fix error.png"
   alt="Mobile sign-up form with red x-mark icon indicating an invalid input and hint for correct input format"
   title="Mobile sign-up form, invalid input"
-  width="150px">
+  width="200px">
   
 ### Links
 
