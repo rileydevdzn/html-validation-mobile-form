@@ -49,7 +49,7 @@ Users should be able to:
   
 ### Links
 
-- Solution URL: [Mobile form with clien-side validation](https://rileydevdzn.github.io/mobile-form-client-side-validation/)
+- Solution URL: [Mobile form with client-side validation](https://rileydevdzn.github.io/mobile-form-client-side-validation/)
 
 ## My process
 
