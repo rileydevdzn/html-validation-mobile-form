@@ -14,7 +14,7 @@ body {
   height: 667px;
   border: 1px solid;
 /*---iPhone 8 outline---*/  
-  background-image: url("https://assets.codepen.io/3270335/iPhone8-outline.png");
+  background-image: url("./iPhone8-outline.png");
   background-repeat: no-repeat;
   background-position: center 15px;
 }
@@ -161,7 +161,7 @@ input:valid:focus:not(:placeholder-shown) ~ .hint {
 /*Visually indicate valid input with a checkmark icon and change in border color of input*/
 input:valid:focus:not(:placeholder-shown), input:valid:not(:focus):not(:placeholder-shown) {
   border: 2px solid green;
-  background: url(https://assets.codepen.io/3270335/green-check-circle.svg);
+  background: url("./green-check-circle.svg");
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: 8px 13px;
@@ -170,7 +170,7 @@ input:valid:focus:not(:placeholder-shown), input:valid:not(:focus):not(:placehol
 /*Visually indicate invalid input with an x-mark and change in border color and line style of input*/
 input:invalid:not(:focus):not(:placeholder-shown) {
   border: 2px dashed red; 
-  background: url(https://assets.codepen.io/3270335/red-xmark-circle.svg);
+  background: url("./red-xmark-circle.svg");
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: 8px 13px;
