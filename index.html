@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Sign-Up Form with Client-side Validation</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<body>
-  <main>
-    <h1>Create an Account</h1>
-    <form id="new-acct-form" class="validate" onsubmit ="return false;">
-      <span class="indicates-required">*required</span>
-      <fieldset>
-        <div class="details">
-          <span class="sr-only">Your Name</span>         
-          <input required type="text" class="input name" id="name" autocomplete="name" aria-describedby="namehint" name="name" pattern="\S+(.|\s)*(.|\S)*" title="Name must have at least 1 character and cannot start with a space" placeholder=" ">
-          <label for="name" aria-hidden="true">Your Name<span class="asterisk">*</span></label>
-          <div class="hint" id="namehint">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mobile form with client-side validation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+  </head>
+  
+  <body>
+    <main>
+      <h1>Create an Account</h1>
+      <form id="new-acct-form" class="validate" onsubmit ="return false;">
+        <span class="indicates-required">*required</span>
+        <fieldset>
+          <div class="details">
+            <span class="sr-only">Your Name</span>         
+            <input required type="text" class="input name" id="name" autocomplete="name" aria-describedby="namehint" name="name" pattern="\S+(.|\s)*(.|\S)*" title="Name must have at least 1 character and cannot start with a space" placeholder=" ">
+            <label for="name" aria-hidden="true">Your Name<span class="asterisk">*</span></label>
+            <div class="hint" id="namehint">
               Please enter your name.
+            </div>
           </div>
-        </div>
-        <div class="details">
-          <span class="sr-only">Email Address</span>
-          <input required type="email" class="input email" id="email" autocomplete="email" aria-describedby="emailhint" name="email" pattern="^[\w]+[\w\.+-]*@[\w]+(\.[\w-]{2,})?\.[a-zA-Z]{2,}$" title="Please enter a valid email address. For example, name@mail.com" placeholder=" ">
-          <label for="email">Email Address<span class="asterisk">*</span></label>
-          <div class="hint" id="emailhint">
+          <div class="details">
+            <span class="sr-only">Email Address</span>
+            <input required type="email" class="input email" id="email" autocomplete="email" aria-describedby="emailhint" name="email" pattern="^[\w]+[\w\.+-]*@[\w]+(\.[\w-]{2,})?\.[a-zA-Z]{2,}$" title="Please enter a valid email address. For example, name@mail.com" placeholder=" ">
+            <label for="email">Email Address<span class="asterisk">*</span></label>
+            <div class="hint" id="emailhint">
               Please enter a valid email address.
+            </div>
           </div>
-        </div>
-        <div class="details">
-          <input required type="password" class="input pw" id="pw" autocomplete="new-password" aria-describedby="pwhint" name="password" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}" title="Password must be at least 6 characters long and contain at least one uppercase, one lowercase, and one number." placeholder=" " autocomplete="new-password">
-          <label for="pw" class="pw-label">Password<span class="asterisk">*</span></label>
-          <button type="button" class="toggle-pw" id="show-pw">show</button>
-          <div id="view-pw"></div>
-          <div class="hint" id="pwhint">
+          <div class="details">
+            <input required type="password" class="input pw" id="pw" autocomplete="new-password" aria-describedby="pwhint" name="password" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}" title="Password must be at least 6 characters long and contain at least one uppercase, one lowercase, and one number." placeholder=" " autocomplete="new-password">
+            <label for="pw" class="pw-label">Password<span class="asterisk">*</span></label>
+            <button type="button" class="toggle-pw" id="show-pw">show</button>
+            <div id="view-pw"></div>
+            <div class="hint" id="pwhint">
               Password must be at least 6 characters long and contain at least one uppercase, one lowercase, and one number.
-          </div>
-      </fieldset>
-      <button type="submit" class="create-acct" id="create-acct">Create Account</button>
-    </form> 
-    <p>Already have an account? <span class="login"><a>Log in</a></span></p> 
-  </main>
-</body>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
-</body>
+            </div>
+        </fieldset>
+        <button type="submit" class="create-acct" id="create-acct">Create Account</button>
+      </form> 
+      <p>Already have an account? <span class="login"><a>Log in</a></span></p> 
+    </main>
+  <script  src="./script.js"></script>  
+  </body>
 </html>
