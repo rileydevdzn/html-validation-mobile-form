@@ -114,6 +114,11 @@ pw.oninput = function(event) {
 }
 ```
 
+```js
+function test() {
+  console.log("Hello World!");
+}
+```
 4. Reward early, punish late pattern for feedback and error messages.
 
 One of the top UX questions I had was about timing, when to validate inputs and display error messages - as a user types? after the input is no longer in focus? when the users goes to submit the form?
