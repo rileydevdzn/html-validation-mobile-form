@@ -139,5 +139,4 @@ One area I'd like to work on more is accessibility, doing more to ensure forms (
 
 ## Author
 
-- Website - [E. Riley](https://rileydevdzn.webflow.io)
 - Frontend Mentor - [@rileydevdzn](https://www.frontendmentor.io/profile/rileydevdzn)
