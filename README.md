@@ -46,7 +46,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Mobile form with client-side validation](https://rileydevdzn.github.io/html-validation-mobile-form/)
+- See it in the browser: [Mobile form with client-side validation](https://rileydevdzn.github.io/html-validation-mobile-form/)
 
 ## My process
 
