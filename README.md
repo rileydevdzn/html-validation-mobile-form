@@ -8,9 +8,9 @@
 ## Table of contents
 
 - [Overview](#overview)
+  - [Links](#links)
   - [The challenge](#the-challenge)
   - [Screenshots](#screenshots)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -19,6 +19,10 @@
 - [Author](#author)
 
 ## Overview
+
+### Links
+
+- View live page: [Mobile form with client-side validation](https://rileydevdzn.github.io/html-validation-mobile-form/)
 
 ### The challenge
 
@@ -43,10 +47,6 @@ Users should be able to:
     height="400px">
     <p><em>Valid and invalid inputs with feedback and error messages</em></p>
 </div>
-
-### Links
-
-- See it in the browser: [Mobile form with client-side validation](https://rileydevdzn.github.io/html-validation-mobile-form/)
 
 ## My process
 
@@ -139,4 +139,5 @@ One area I'd like to work on more is accessibility, doing more to ensure forms (
 
 ## Author
 
+- Website - [Riley Portfolio](https://rileydevdzn.webflow.io)
 - Frontend Mentor - [@rileydevdzn](https://www.frontendmentor.io/profile/rileydevdzn)
